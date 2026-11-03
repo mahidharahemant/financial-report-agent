@@ -67,13 +67,6 @@ python -m src.cli --ticker MSFT --fiscal-year 2025
 4. A LangChain agent chooses tools and synthesizes evidence-backed analysis.
 5. Pydantic models define the expected output contract; the UI renders JSON and sources.
 
-## Interview talking points
-- Tool descriptions help the agent choose between structured numeric facts and narrative search.
-- Numeric calculations are deterministic Python code, not LLM arithmetic.
-- The source document is treated as untrusted input, not instructions.
-- Missing data is represented as unavailable, not guessed.
-- Evaluation should measure numeric correctness, evidence support, completeness, tool-selection quality, and error handling.
-
 ## Tests
 ```bash
 pytest -q
